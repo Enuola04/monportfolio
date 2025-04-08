@@ -28,11 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>
+      <body className="d-flex flex-column min-vh-100">
         <ReduxProvider>
           {children}
         </ReduxProvider>
       </body>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HoA1mPnEVN9grlm6pW96jGl38uqcPZCtZQEb+Pb94gD9aB9yBN/jX+RtE8AjCh2Z"
+      crossOrigin="anonymous"
+    ></script>
     </html>
   );
 }
