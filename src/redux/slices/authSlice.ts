@@ -22,8 +22,8 @@ const initialState: AuthState = {
       password: 'admin123',
     },
     {
-      username: 'jahswant',
-      email: 'jahswant@example.com',
+      username: 'Seck Alioune Badara',
+      email: 'alioune@collegelacite.com',
       password: 'password',
     },
   ],
