@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface Testimonial {
+export interface Testimonial {
   id: number;
   author: string;
   message: string;

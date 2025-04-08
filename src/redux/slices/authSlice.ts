@@ -6,7 +6,7 @@ interface User {
   password: string;
 }
 
-interface AuthState {
+export interface AuthState {
   isAuthenticated: boolean;
   user: User | null;
   registeredUsers: User[];
