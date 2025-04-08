@@ -1,6 +1,7 @@
 'use client';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
+import Link from 'next/link';
 
 export default function MainContent() {
   const skills = useSelector((state: RootState) => state.skills.list);
@@ -43,25 +44,27 @@ export default function MainContent() {
         </div>
       </section>
 
-      {/* Projets */}
-      <section id="projets" className="mb-5 text-center">
-        <h2 className="mb-4">📁 Projets</h2>
-        <div className="row">
-          {projects.map((project) => (
-            <div className="col-md-6 mb-4" key={project.id}>
-              <div className="card h-100 shadow">
-                <div className="card-body">
-                  <h5 className="card-title">{project.title}</h5>
-                  <p className="card-text">{project.description}</p>
-                  <p className="text-muted">
-                    <strong>Technologies :</strong> {project.technologies.join(', ')}
-                  </p>
-                </div>
-              </div>
+{/* Projets */}
+<section id="projets" className="mb-5 text-center">
+  <h2 className="mb-4">📁 Projets</h2>
+  <div className="row">
+    {projects.map((project) => (
+      <div className="col-md-6 mb-4" key={project.id}>
+        <Link href={`/projets/${project.id}`} className="text-decoration-none text-dark">
+          <div className="card h-100 shadow project-hover">
+            <div className="card-body">
+              <h5 className="card-title">{project.title}</h5>
+              <p className="card-text">{project.description}</p>
+              <p className="text-muted">
+                <strong>Technologies :</strong> {project.technologies.join(', ')}
+              </p>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </Link>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* Témoignages */}
       <section id="temoignages" className="mb-5 text-center">
