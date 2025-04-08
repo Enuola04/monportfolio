@@ -14,6 +14,7 @@ const initialState: TestimonialsState = {
   list: [
     { id: 1, author: 'Alice', message: 'Excellent développeur !' },
     { id: 2, author: 'Bob', message: 'Portfolio très professionnel.' },
+    { id: 3, author: 'Jean', message: 'Travailleur profesionel.' },
   ],
 };
 
